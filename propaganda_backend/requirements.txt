@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+scikit-learn
+tensorflow==2.12.0  # or your tested version
+pandas
+numpy
+joblib
+python-dotenv
+lxml
+beautifulsoup4
+tweepy
+requests
+snscrape

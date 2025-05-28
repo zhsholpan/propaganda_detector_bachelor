@@ -1,0 +1,128 @@
+.app-container {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.technique-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.technique-subtitle {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  margin: 0 auto 40px auto;
+  display: block;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.definition-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+.definition-left {
+  flex: 1;
+}
+
+.definition-left h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.definition-card {
+  flex: 1;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.icon-box {
+  font-size: 28px;
+  background-color: #eee;
+  padding: 12px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.definition-card-desc {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #555;
+}
+
+.example-header {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.example-table {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 60px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+}
+
+.label {
+  font-weight: bold;
+  width: 40%;
+}
+
+.value {
+  width: 60%;
+  text-align: right;
+  font-style: italic;
+  color: #333;
+}
+
+.explore-more {
+  background: #f2f2f2;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+} 

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pickle
+*.h5
+*.keras
+
+# Jupyter/Colab
+.ipynb_checkpoints
+
+# Virtual environments
+venv*/
+.env
+
+# Node
+node_modules/
+build/
+dist/
+
+# VSCode
+.vscode/
+
+# Datasets and models
+dataset/
+tweets_dataset/
+*.json
+*.csv
+*.tsv
+propaganda_backend/app/model/
