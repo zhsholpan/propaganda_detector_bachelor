@@ -9,21 +9,36 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 MODEL_DIR = BASE_DIR / "app" / "model"
 
 # === Model loading ===
+
 def load_tokenizer():
-    return joblib.load(MODEL_DIR / "tokenizer_propaganda-2.pickle")
+    path = MODEL_DIR / "tokenizer_propaganda-2.pickle"
+    print(f"📦 Attempting to load tokenizer from: {path}")
+    if not path.exists():
+        raise FileNotFoundError(f"❌ Tokenizer file not found at: {path}")
+    return joblib.load(path)
 
 def load_label_encoder():
-    return joblib.load(MODEL_DIR / "label_encoder.pickle")
+    path = MODEL_DIR / "label_encoder.pickle"
+    print(f"📦 Attempting to load label encoder from: {path}")
+    if not path.exists():
+        raise FileNotFoundError(f"❌ Label encoder file not found at: {path}")
+    return joblib.load(path)
 
 def load_propaganda_model():
-    return load_model(MODEL_DIR / "final_propaganda_model-2.keras")
+    path = MODEL_DIR / "final_propaganda_model-2.keras"
+    print(f"📦 Attempting to load model from: {path}")
+    if not path.exists():
+        raise FileNotFoundError(f"❌ Model file not found at: {path}")
+    return load_model(path)
 
 # === Preprocessing ===
+
 def preprocess_text(text, tokenizer, maxlen=200):
     seq = tokenizer.texts_to_sequences([text])
     return pad_sequences(seq, maxlen=maxlen)
 
 # === Why-detected explanations per technique ===
+
 def get_detection_reason(label):
     reasons = {
         "Loaded Language": "Uses emotionally charged or biased terms to influence perception.",

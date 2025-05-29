@@ -84,10 +84,26 @@ technique_data = {
 @app.on_event("startup")
 async def startup_event():
     global tokenizer, label_encoder, model
-    tokenizer = load_tokenizer()
-    label_encoder = load_label_encoder()
-    model = load_propaganda_model()
-    print("✅ Models and tokenizer loaded at startup")
+    print("📦 Starting model loading...")
+
+    try:
+        tokenizer = load_tokenizer()
+        print("✅ Tokenizer loaded")
+    except Exception as e:
+        print(f"❌ Error loading tokenizer: {e}")
+
+    try:
+        label_encoder = load_label_encoder()
+        print("✅ Label encoder loaded")
+    except Exception as e:
+        print(f"❌ Error loading label encoder: {e}")
+
+    try:
+        model = load_propaganda_model()
+        print("✅ Model loaded")
+    except Exception as e:
+        print(f"❌ Error loading model: {e}")
+
 
 class TextInput(BaseModel):
     text: str
